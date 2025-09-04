@@ -1,5 +1,9 @@
+import SectionWrapper from "@/components/layout/section-wrapper";
+
 export default function Page() {
   return (
-    <div>Page</div>
+    <div className="space-y-8">
+
+    </div>
   )
 }
