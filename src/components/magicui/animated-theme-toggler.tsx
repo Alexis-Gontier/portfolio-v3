@@ -4,6 +4,7 @@ import { Moon, SunDim } from "lucide-react";
 import { useState, useRef } from "react";
 import { flushSync } from "react-dom";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/shadcn-ui/button";
 
 type props = {
   className?: string;
@@ -46,8 +47,14 @@ export const AnimatedThemeToggler = ({ className }: props) => {
     );
   };
   return (
-    <button ref={buttonRef} onClick={changeTheme} className={cn(className)}>
+    <Button
+      variant="ghost"
+      size="icon"
+      ref={buttonRef}
+      onClick={changeTheme}
+      className={cn(className, "cursor-pointer")}
+    >
       {isDarkMode ? <SunDim /> : <Moon />}
-    </button>
+    </Button>
   );
 };
