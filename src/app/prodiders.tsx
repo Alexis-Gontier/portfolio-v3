@@ -7,14 +7,14 @@ type ProvidersProps = {
 export default function Providers({ children }: ProvidersProps) {
   return (
     <>
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-        >
-            {children}
-        </ThemeProvider>
+      <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+      >
+          {children}
+      </ThemeProvider>
     </>
   )
 }
